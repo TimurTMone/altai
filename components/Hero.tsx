@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { hero, industries } from "@/lib/copy";
@@ -167,6 +168,16 @@ export function Hero({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
+          <div className="relative mb-4 overflow-hidden rounded-xl border border-white/10 bg-black/40">
+            <Image
+              src="/hero-main.png"
+              alt="Young operator overseeing AI systems dashboards"
+              width={764}
+              height={1024}
+              className="h-48 w-full object-cover opacity-95 sm:h-64"
+              priority
+            />
+          </div>
           <h2 className="text-sm font-semibold text-slate-50">
             Request your AI Growth Audit
           </h2>
